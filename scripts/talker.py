@@ -8,6 +8,6 @@ rate = rospy.Rate(10)
 while not rospy.is_shutdown():
     hello_str = String()
     hello_str.data = "hello world %s" % rospy.get_time()
-    rospy.loginfo(hello_str.data)
+    # rospy.loginfo(hello_str.data)
     pub.publish(hello_str)
     rate.sleep()
