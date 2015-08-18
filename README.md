@@ -1,2 +1,2 @@
 # ros_book_OTL
-- Test
+- This is the practice pkg for ROSではじめるロボットプログラミング
