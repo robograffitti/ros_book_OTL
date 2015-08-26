@@ -8,7 +8,7 @@ from ros_book_OTL.msg import GoUntilBumperGoal
 
 def go_until_bumper():
     action_client = actionlib.SimpleActionClient('bumper_action', GoUntilBumperAction)
-    aclion_client.wait_for_server()
+    action_client.wait_for_server()
     goal = GoUntilBumperGoal()
     goal.target_vel.linear.x = 0.8
     goal.timeout_sec = 10
@@ -16,7 +16,7 @@ def go_until_bumper():
     action_client.send_goal(goal)
     action_client.wait_for_result()
     result = action_client.get_result()
-    if result.bumper_hit():
+    if result.bumper_hit:
         rospy.loginfo('bumper hit!')
     else:
         rospy.loginfo('failed')
